@@ -1,5 +1,23 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 
+import {
+  ApexNonAxisChartSeries,
+  ApexPlotOptions,
+  ApexChart,
+  ApexLegend,
+  ApexResponsive,
+  ChartComponent
+} from "ng-apexcharts";
+
+export type ChartOptions = {
+  series: ApexNonAxisChartSeries;
+  chart: ApexChart;
+  labels: string[];
+  colors: string[];
+  legend: ApexLegend;
+  plotOptions: ApexPlotOptions;
+  responsive: ApexResponsive | ApexResponsive[];
+};
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
