@@ -1,29 +1,33 @@
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark  fixed-top">
+  <div class="container-fluid" id="top-section">
     <a class="navbar-brand" href="#">
       <img src="../assets/LOGO.png" alt="" class="logo__imagem">
       Innov-IT
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Início</a>
+          <a class="nav-link active" aria-current="page" href="#" (click)="scrollToTopSection()">Início</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Quem Somos</a>
+          <a class="nav-link" href="#" (click)="scrollToQuemSomosSection()">Quem Somos</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
             Opções
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Fale Conosco</a></li>
+            <li><a class="dropdown-item" href="#" (click)="scrollToFaleConoscoSection()">Fale Conosco</a></li>
             <li><a class="dropdown-item" href="#" (click)="scrollToTeamSection()">Nosso Time</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li><a class="dropdown-item" href="#">Nossos Valores</a></li>
           </ul>
         </li>
@@ -42,9 +46,12 @@
 <!-- CARROSSEL -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+      aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+      aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -67,32 +74,84 @@
   </button>
 </div>
 
-<!-- INTRODUÇÃO E JUSTIFICATIVA -->
-
-
 <!-- PAPEIS DOS COMPONENTES -->
-<div class="container__integrantes">
+<div class="container__integrantes" id="quem-somos-section">
   <div class="quem__somos">
-    <div >
-      <div class="card" style="width: 40rem; background-image: linear-gradient(to bottom, #333333, #000); margin-top: 40px; margin-right: 60px;" >
-       <div class="card-body">
+    <div>
+      <div class="card"
+        style="width: 40rem; background-image: linear-gradient(to bottom, #333333, #000); margin-top: 40px; margin-right: 60px;">
+        <div class="card-body">
           <h5 class="card-title text-white">Quem Somos?</h5>
           <p class="card-text text-white">
-            A InnovIT, fundada em 2020 em Santos, atende às necessidades de empresas portuárias na área de tecnologia. 
-            Oferecemos suporte técnico, consultoria e gestão de redes e sistemas, com foco na otimização das operações, 
-            eficiência e segurança cibernética. Tornamo-nos um parceiro confiável, impulsionando o desenvolvimento 
-            tecnológico e econômico do setor. Nosso compromisso com a inovação abrange hardware, software e segurança digital, 
-            visando aprimorar as decisões e beneficiar pessoas globalmente. Somos dedicados a transformar a tecnologia em uma 
+            A InnovIT, fundada em 2020 em Santos, atende às necessidades de empresas portuárias na área de tecnologia.
+            Oferecemos suporte técnico, consultoria e gestão de redes e sistemas, com foco na otimização das operações,
+            eficiência e segurança cibernética. Tornamo-nos um parceiro confiável, impulsionando o desenvolvimento
+            tecnológico e econômico do setor. Nosso compromisso com a inovação abrange hardware, software e segurança
+            digital,
+            visando aprimorar as decisões e beneficiar pessoas globalmente. Somos dedicados a transformar a tecnologia
+            em uma
             vantagem estratégica para nossos clientes e moldar o futuro da tecnologia.
           </p>
         </div>
       </div>
     </div>
-    <img src="../assets/LOGO.png" alt=""  class="subir-descer-animacao">
+    <img src="../assets/LOGO.png" alt="" class="subir-descer-animacao">
   </div>
+  <!-- MISSÃO E VALORES -->
+  <div>
+    <p class="titulo__integrantes">Missão e Valores</p>
+    <p class="missao">Nossa missão é impulsionar a transformação tecnológica nas empresas portuárias, oferecendo soluções inovadoras e confiáveis para aprimorar a eficiência e a segurança.</p>
+    <div class="valores__container">
+      <div class="card bg-dark text-white" style="width: 18rem; margin-right: 10px;">
+        <img class="card-img-top" src="../assets/in.jpg" alt="Card image cap" style="height: 160px;">
+        <div class="card-body">
+          <p class="card-text">Inovação Constante</p>
+        </div>
+      </div>
+      <div class="card  bg-dark text-white" style="width: 18rem; margin-right: 10px;">
+        <img class="card-img-top" src="../assets/conf.jpg" alt="Card image cap" style="height: 160px;">
+        <div class="card-body">
+          <p class="card-text">Parceria de Confiança</p>
+        </div>
+      </div>
+      <div class="card  bg-dark text-white" style="width: 18rem; margin-right: 10px;">
+        <img class="card-img-top" src="../assets/cs.png" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Segurança Cibernética</p>
+        </div>
+      </div>
+      <div class="card  bg-dark text-white" style="width: 18rem; margin-right: 10px;">
+        <img class="card-img-top" src="../assets/ig.webp" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Impacto Global</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOSSOS CLIENTES -->
+  <p class="titulo__integrantes">Nossos Clientes</p>
+  <div class="clientes">
+    <div class="container__parceria">
+      <img src="../assets/navegantes.png" alt="" class="imagem__parcerias">
+      <div class="cargos__integrantes">
+      </div>
+    </div>
+    <div class="container__parceria">
+      <img src="../assets/hb.jpg" alt="" class="imagem__parcerias">
+      <div class="cargos__integrantes">
+      </div>
+    </div>
+    <div class="container__parceria">
+      <img src="../assets/sb.png" alt="" class="imagem__parcerias">
+      <div class="cargos__integrantes">
+      </div>
+    </div>
+  </div>
+
   <!-- colocar os cargos aqui -->
-  <p class="titulo__integrantes">Conheça Nosso Time</p>
-  <div class="fotos__integrantes" id="team-section">
+  <p class="titulo__integrantes" id="team-section">Conheça Nosso Time</p>
+  <div class="fotos__integrantes">
     <div>
       <img src="../assets/rafa.jpeg" alt="" class="imagem__integrantes">
       <div class="cargos__integrantes">
@@ -138,123 +197,127 @@
       </div>
     </div>
   </div>
-</div>
 
-<!-- ATIVIDADES -->
-<div>
-  Nossas atividades englobam uma ampla gama de setores e competências. Desde o desenvolvimento de soluções de Hardware
-  inovadores que potencializam a infraestrutura tecnológica de nossos clientes, até a criação de Software altamente
-  funcional que atende às necessidades específicas de cada parceiro.
-  
-  Ainda contamos com a prestação de serviços especializados de suporte técnico até a oferta de consultoria estratégica
-  em TI, e com isso  continuamos a elevar o padrão de excelência que nos define.
 
-  Dentro do cenário em constante evolução da segurança digital, temos orgulho de oferecer ferramentas de última geração
-  que protegem os ativos digitais e a privacidade dos nossos clientes. Nosso compromisso com a excelência se estende ao
-  fornecimento de serviços que não apenas atendem às expectativas, mas também superam as barreiras, impulsionando as
-  operações de nossos clientes para níveis superiores de eficiência e segurança.
-  
-  Estamos ansiosos para continuar nossa jornada de inovação, enquanto continuamos a desempenhar um papel vital no avanço
-  da tecnologia e no crescimento sustentável das organizações que atendemos.
-</div>
-
-<!-- PARCERIAS -->
-<div class="parceiros__container">
-  <!-- colocar imagens  -->
-  <p class="titulo__integrantes">Parceiros de Tecnologia</p>
-
-    <div  class="parceiros">
+  <!-- PARCERIAS -->
+    <p class="titulo__integrantes">Parceiros de Tecnologia</p>
+    
+    <div class="parceiros">
       <div class="container__parceria">
         <img src="../assets/dell.png" alt="" class="imagem__parcerias">
         <div class="cargos__integrantes">
           <h5>Dell</h5>
           <h6>
-            Fornecimento de Hardware e Software 
+            Fornecimento de Hardware e Software
           </h6>
           <!-- <p>
-            Optamos por fechar parceria com as empresas Dell e Microsoft para um melhor fornecimento 
-            de hardware e software (nesta sequência) com descontos e facilidades, além de acesso a treinamentos 
-            e atualizações posteriores nos mesmo.
-          </p> -->
+              Optamos por fechar parceria com as empresas Dell e Microsoft para um melhor fornecimento 
+              de hardware e software (nesta sequência) com descontos e facilidades, além de acesso a treinamentos 
+              e atualizações posteriores nos mesmo.
+            </p> -->
         </div>
       </div>
-
+    
       <div class="container__parceria">
         <img src="../assets/microsoft.png" alt="" class="imagem__parcerias">
         <div class="cargos__integrantes">
           <h5>Microsoft</h5>
           <h6>
-            Fornecimento de Hardware e Software 
+            Fornecimento de Hardware e Software
           </h6>
           <!-- <p>
-            Optamos por fechar parceria com as empresas Dell e Microsoft para um melhor fornecimento 
-            de hardware e software (nesta sequência) com descontos e facilidades, além de acesso a treinamentos 
-            e atualizações posteriores nos mesmo.
-          </p> -->
+              Optamos por fechar parceria com as empresas Dell e Microsoft para um melhor fornecimento 
+              de hardware e software (nesta sequência) com descontos e facilidades, além de acesso a treinamentos 
+              e atualizações posteriores nos mesmo.
+            </p> -->
         </div>
       </div>
-  
+    
       <div class="container__parceria">
-        <img src="../assets/cisco.avif" alt="" class="imagem__parcerias">
+        <img src="../assets/az.webp" alt="" class="imagem__parcerias">
         <div class="cargos__integrantes">
           <h5>CISCO/Secure X</h5>
           <h6>
-            Segurança Digital 
+            Segurança Digital
           </h6>
           <!-- <p>
-            Nossa parceria com a CISCO tem como foco o oferecimento adicional de proteção, antivírus e firewalls 
-            aos nossos clientes finais.
-          </p> -->
+              Nossa parceria com a CISCO tem como foco o oferecimento adicional de proteção, antivírus e firewalls 
+              aos nossos clientes finais.
+            </p> -->
         </div>
       </div>
       <div class="container__parceria">
-        <img src="../assets/hostinger.png" alt="" class="imagem__parcerias">
+        <img src="../assets/tab.png" alt="" class="imagem__parcerias__tab">
         <div class="cargos__integrantes">
-          <h5>Hostinger</h5>
+          <h5>Tableau</h5>
           <h6>
-            Hospedagem 
+            Serviços de Análise de Dados e BI
           </h6>
           <!-- <p>
-            Esta parceria tem como foco o oferecimento facilitado ao serviço de hospedagem, 
-            parte crucial do serviço que oferecemos aos clientes.
-          </p> -->
+              Esta parceria tem como foco o oferecimento facilitado ao serviço de hospedagem, 
+              parte crucial do serviço que oferecemos aos clientes.
+            </p> -->
         </div>
       </div>
       <div class="container__parceria">
-        <img src="../assets/v4.png" alt="" class="imagem__parcerias">
+        <img src="../assets/gc.png" alt="" class="imagem__parcerias">
         <div class="cargos__integrantes">
-          <h5>V4 Company</h5>
+          <h5>Google Cloud</h5>
           <h6>
-            Consultoria 
+            Armazenamento em Nuvem
           </h6>
           <!-- <p>
-            Oferecendo serviço de consultoria podemos maximizar os lucros de nossos clientes e 
-            assim torná-los fixos e aumentar consequentemente os nossos lucros particulares.
-          </p> -->
+              Oferecendo serviço de consultoria podemos maximizar os lucros de nossos clientes e 
+              assim torná-los fixos e aumentar consequentemente os nossos lucros particulares.
+            </p> -->
         </div>
       </div>
-    </div>
   </div>
+  
+</div>
 
-<!-- LOCALIZAÇÃO + FALE CONOSCO -->
-<div>
-  <img src="" alt="">
-  <div class="card">
-    <div class="card-header ">
-      Quote
-    </div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <!-- LOCALIZAÇÃO -->
-        <p>Av. Washington Luis, 316 - Gonzaga, Santos - SP, 11055-000.</p>
-        <!-- mapa aqui -->
-        <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
-      </blockquote>
+
+
+<!-- RODAPÉ -->
+<div class="fale__conosco" id="fale-conosco-section">
+  <div>
+    <form>
+      <p>Fale Conosco</p>
+      <div class="form-group">
+        <label for="exampleInputEmail1" style="padding-bottom: 10px;">Endereço de email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Seu email">
+        <small id="emailHelp" class="form-text text-muted"></small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1" style="padding-bottom: 10px;">Mensagem</label>
+        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nos envie uma mensagem">
+      </div>
+      <div class="form-group form-check">
+        <!-- <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+        <!-- <label class="form-check-label" for="exampleCheck1">Clique em mim</label> -->
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+  <div class="rodape">
+      <!-- <div class="info__contato">
+        <img src="../assets/LOGO.png" alt="" class="logo__empresa" />
+        <img src="../assets/selo-gptw.png" alt="" class="logo__gptw">
+      </div> -->
+    <div class="contato">
+      <div class="infos">
+        <img src="../assets/telefone.png" alt="" class="icone__telefone">
+        <p class="paragrafos__contato">+55 13 4878-9878</p>
+      </div>
+      <div class="infos">
+        <img src="../assets/envelope.png" alt="" class="icone__envelope">
+        <p class="paragrafos__contato">comunicacao@innovit.com.br</p>
+      </div>
+      <div class="infos">
+        <img src="../assets/mobility_5592577.png" alt="" class="icone__envelope">
+        <p class="paragrafos__contato">Av. Washington Luis, 316 - Gonzaga, Santos - SP, 11055-000</p>
+      </div>
     </div>
   </div>
 </div>
-
-<!-- NOSSOS CLIENTES -->
-  <div>
-
-  </div>

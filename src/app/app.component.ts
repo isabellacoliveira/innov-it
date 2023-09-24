@@ -16,4 +16,24 @@ export class AppComponent {
       teamSection.scrollIntoView({ behavior: 'smooth' });
     }
   }
+  scrollToQuemSomosSection() {
+    const teamSection = this.el.nativeElement.querySelector('#quem-somos-section');
+    if (teamSection) {
+      teamSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  scrollToTopSection() {
+    const teamSection = this.el.nativeElement.querySelector('#top-section');
+    if (teamSection) {
+      teamSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  scrollToFaleConoscoSection() {
+    const teamSection = this.el.nativeElement.querySelector('#fale-conosco-section');
+    if (teamSection) {
+      teamSection.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    
+  }
 }
