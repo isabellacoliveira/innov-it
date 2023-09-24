@@ -79,4 +79,31 @@
     display: flex;
     flex-direction: column;
   }
+
+  .quem__somos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    
+    img{
+      width: 300px;
+    }
+  }
+
+  @keyframes subirDescer {
+    0%, 100% {
+      transform: translateY(0); /* A posição inicial e final é a mesma */
+    }
+    50% {
+      transform: translateY(-20px); /* Eleva a div 20 pixels no meio da animação */
+    }
+  }
+  
+  .subir-descer-animacao {
+    animation: subirDescer 2s ease-in-out infinite; /* Aplica a animação */
+  }
+  
   

@@ -18,29 +18,29 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            Opções
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Fale Conosco</a></li>
+            <li><a class="dropdown-item" href="#" (click)="scrollToTeamSection()">Nosso Time</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">Nossos Valores</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        </li> -->
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="O que deseja buscar?">
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
     </div>
   </div>
 </nav>
 
 <!-- CARROSSEL -->
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -68,57 +68,36 @@
 </div>
 
 <!-- INTRODUÇÃO E JUSTIFICATIVA -->
-<div>
-  <div class="card" style="width: 40rem; background-color: black;">
-    <div class="card-body">
-      <h5 class="card-title text-white">Nossa História</h5>
-      <h6 class="card-subtitle mb-2 text-white">Histórico</h6>
-      <p class="card-text text-white">
-        Em meados de 2020, nasceu a InnovIT na bela cidade de Santos, quando uma dupla de visionárias tecnológicas se
-        uniram para criar algo excepcional.Foi nesse momento que uma observação perspicaz identificou uma lacuna
-        significativa no cenário local: as empresas portuárias estavam travando uma batalha contínua contra os
-        desafios tecnológicos em rápida mutação. Diante desse panorama, ao longo dos anos, construímos uma base
-        sólida de conhecimento e expertise, ganhando reconhecimento como pioneiros em nosso setor.
-        Desde então, a nossa trajetória tem sido marcada por sucessos inovadores e parcerias sólidas.
-        O foco incansável na excelência nos permitiu conquistar a confiança das empresas portuárias, tornando-as
-        nossos principais clientes. O nosso compromisso com a evolução tecnológica tem resultado em avanços notáveis,
-        consolidando a InnovIT como uma força motriz do progresso local.
-      </p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <img src="" alt="">
-</div>
 
-<div>
-  <div class="card" style="width: 40rem; background-color: black;">
-    <div class="card-body">
-      <!-- <h5 class="card-title text-white">Proposta</h5> -->
-      <h6 class="card-subtitle mb-2 text-white">Fundação</h6>
-      <p class="card-text text-white">
-        Fundada com a visão de transformar a maneira como as empresas e entidades governamentais interagem com a tecnologia, a InnovIT é uma
-        organização multifacetada que abrange diversos setores. Nosso compromisso inabalável com a inovação nos permite oferecer soluções
-        abrangentes, tanto o âmbito de Hardware quanto de Software, consultoria informacional de ponta e robustas ferramentas de segurança digital.
-        Nossa dedicação em fornecer serviços que não apenas reduzem riscos, mas também aprimoram as decisões, visa beneficiar as pessoas em todo o mundo.
-      </p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
-  <img src="" alt="">
-</div>
 
 <!-- PAPEIS DOS COMPONENTES -->
 <div class="container__integrantes">
+  <div class="quem__somos">
+    <div >
+      <div class="card" style="width: 40rem; background-image: linear-gradient(to bottom, #333333, #000); margin-top: 40px; margin-right: 60px;" >
+       <div class="card-body">
+          <h5 class="card-title text-white">Quem Somos?</h5>
+          <p class="card-text text-white">
+            A InnovIT, fundada em 2020 em Santos, atende às necessidades de empresas portuárias na área de tecnologia. 
+            Oferecemos suporte técnico, consultoria e gestão de redes e sistemas, com foco na otimização das operações, 
+            eficiência e segurança cibernética. Tornamo-nos um parceiro confiável, impulsionando o desenvolvimento 
+            tecnológico e econômico do setor. Nosso compromisso com a inovação abrange hardware, software e segurança digital, 
+            visando aprimorar as decisões e beneficiar pessoas globalmente. Somos dedicados a transformar a tecnologia em uma 
+            vantagem estratégica para nossos clientes e moldar o futuro da tecnologia.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="../assets/LOGO.png" alt=""  class="subir-descer-animacao">
+  </div>
   <!-- colocar os cargos aqui -->
   <p class="titulo__integrantes">Conheça Nosso Time</p>
-  <div class="fotos__integrantes">
+  <div class="fotos__integrantes" id="team-section">
     <div>
       <img src="../assets/rafa.jpeg" alt="" class="imagem__integrantes">
       <div class="cargos__integrantes">
         <h5>Rafaela Cristina</h5>
-        <h6>CEO/Especialista em Gerenciamento de Dados</h6>
+        <h6>CEO/Fundadora</h6>
       </div>
     </div>
     <div>
@@ -131,7 +110,7 @@
     <div>
       <img src="../assets/pedro.jpeg" alt="" class="imagem__integrantes">
       <div class="cargos__integrantes">
-        <h5>Pedro ??</h5>
+        <h5>Pedro Ferreira</h5>
         <h6>Administrador de Sistemas</h6>
       </div>
     </div>
